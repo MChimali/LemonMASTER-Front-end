@@ -1,0 +1,28 @@
+$primary-color:rgb(0, 38, 255);
+$box-shadow-color:complement($primary-color);
+$border-radius: 2em;
+
+
+@mixin border-shadow{    
+    -webkit-box-shadow: 3px 3px 5px 6px $box-shadow-color; 
+    -moz-box-shadow: 3px 3px 5px 6px $box-shadow-color;
+    box-shadow: -20px 20px 10px 1px $box-shadow-color; 
+}
+
+@mixin main-fontStyle {
+	font: {	
+        family: "arial";
+        weight: bold;
+        size: 150%;
+    }
+    text-decoration:underline;
+}
+
+@mixin secondary-fontStyle {
+	font: {	
+        family: "verdana";
+        weight: 300;
+        size: 100%;
+    }
+    color:$primary-color;
+}

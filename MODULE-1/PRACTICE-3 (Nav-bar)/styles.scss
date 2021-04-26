@@ -1,0 +1,40 @@
+.nav-bar{
+    list-style-type: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+
+    padding: 0x;
+    margin:0px;
+
+    background-color: #006a7b;
+    
+    display:flex;    
+    justify-content: space-around;    
+
+    li{
+        display:flex;
+        padding:20px;        
+    }
+
+    @media (max-width: 900px) {
+        & {
+          flex-direction: column;
+        }
+        & li{
+            justify-content:center;
+        }        
+    }
+
+    li a{
+        text-decoration: none;
+        color:white;        
+    }
+
+    li:hover{
+        background-color: #2d4b50;
+    }    
+}
+
+
+
+

@@ -1,0 +1,46 @@
+@import '_themeB.scss';
+/* @import '_themeA.scss'; */
+
+.main-font{
+    padding:30px 0px;
+    @include main-fontStyle();
+}
+
+.secondary-font{
+    padding:30px 0px;
+    @include secondary-fontStyle();
+}
+
+.container{
+    padding:50px;
+    display:inline-grid;
+    
+    .box{    
+        text-align: center;
+        width:auto;
+        padding:80px 50px;
+        border: 1px solid grey;         
+        
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}){
+                background-color:lighten($primary-color, $i * 12%);
+            }
+        }
+
+        &:nth-child(6){
+            @include border-shadow();
+            border-radius: $border-radius;
+        }      
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

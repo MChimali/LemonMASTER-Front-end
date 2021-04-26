@@ -1,0 +1,57 @@
+$color:rgb(119, 179, 119);
+
+.body-container{
+    display:flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+}
+
+.main-container{
+    margin:20px;
+    display:inline-grid;
+    grid-template: repeat(2, auto) / repeat(1, 300px);
+    border:1px solid grey;
+}
+
+.secondary-container{
+    display:grid;
+    padding:20px;
+
+    & > *{
+        padding:10px 0px;
+    }
+    p{
+        font: {
+            family:"Times New Roman", Times, serif;
+            size:1.05em;            
+        } 
+        line-height: 1.12em;
+    }
+    
+    h2{
+        font: {
+            family:arial;
+            weight: bold;
+            size:1.2em;            
+        }
+        padding-top:0px;
+    }
+    button{
+        margin-top:10px;
+    }
+
+    p:nth-child(3){
+        justify-self:end;
+        font-weight:bold;
+        span{
+            font-weight:initial;
+            color:$color;
+        }
+    }
+
+    button{
+        padding:20px;
+        background-color:$color;
+        color:white;
+    }
+}
