@@ -1,0 +1,149 @@
+$primary-color: #CDDE1A;
+$background-color: lighten(#BEBEBE, 20%);
+$paper-color: white;
+$breakpoint: 768px;
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+header {
+  .toolbar {
+    padding: 8px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      padding: 4px;
+    }
+  }
+  .page-title {
+    padding: 15px;
+    font-size: 22px;
+    background-color: $primary-color;
+    color: white;
+  }
+}
+.page-container {
+  background-color: $background-color;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  nav {
+    position: relative;
+    min-width: 170px;
+    border-right: 1px solid #ccc;
+    background-color: darken($primary-color, 35%);
+    color: white;
+    .menu-container {
+      position: sticky;
+      top: 0px;
+    }
+    .menu-title {
+      text-transform: uppercase;
+      padding: 8px;
+      font-weight: bold;
+      text-align: center;
+    }
+    ul {
+      margin: 0px;
+      padding: 0px;
+      li {
+        list-style: none;
+        padding: 8px;
+        border-bottom: 1px solid #ccc;         font-size: 90%;
+        background-color: lighten($primary-color, 45%);
+        color: black;
+        &:first-child {
+          border-top: 1px solid #ccc;
+        }
+      }
+    }
+  }
+  main {
+    flex: 1;
+    padding: 15px;
+  }
+}
+footer {
+  padding: 15px;
+  background-color: lighten($primary-color, 45%);
+  font-size: 85%;
+}
+@media screen and (max-width: $breakpoint) {
+  header {
+    .toolbar {
+      display: none;
+    }
+  }
+  .page-container {
+    flex-direction: column;
+    nav {
+      position: sticky;
+      top: 0px;
+      .menu-title {
+        display: none;
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        li {
+          flex: 1;
+          margin: 8px;
+          border: 1px solid #ccc;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+/* card.scss */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .card {
+    width: 200px;
+    margin: 8px;
+    padding: 15px;
+    background-color: $paper-color;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    img {
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+  }
+}
+@media screen and (max-width: $breakpoint) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    .card {
+      margin: 2px 0px;
+      width: inherit;
+      padding: 15px;
+      background-color: $paper-color;
+      border: 0px;
+      border-radius: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      img {
+        margin-right: 16px;
+      }
+    }
+  }
+}
